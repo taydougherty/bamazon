@@ -25,11 +25,12 @@ function displayProduct() {
             console.log(res[i].item_id + " | " + res[i].product_name + " | " + res[i].department_name + " | " + res[i].price);
         }
       itemSearch();
-    //   connection.end();
+      connection.end();
     });
   }
 
-inquirer
+function itemSearch() {
+  inquirer
     .prompt([{
       name: "id",
       type: "input",
@@ -57,9 +58,15 @@ inquirer
                 {
                   stock_quantity: quantity - answer.quantity
                 },
-            ]
+            ],
+            function(err) {
+              if(err) throw err;
+              
+              console.log("Your order is complete!");
+            }   
         } else {
           console.log("Sorry we're out of stock!");
         }
       });
     });
+};
