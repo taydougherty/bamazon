@@ -44,14 +44,22 @@ inquirer
     .then(function(answer) {
       var query = "SELECT * FROM products WHERE ?";
       connection.query(query, { item_id: answer.id }, function(err, res) {
-    
-        // check if the quantity demanded is less than or equal to the stock quantity
-        if()
-        // if it is =< then display the price for the user (price x quantity)
-        // if there is not enough then display "insufficient quantity"
-        for (var i = 0; i < res.length; i++) {
-            if()
-          console.log("Position: " + res[i].position + " || Song: " + res[i].song + " || Year: " + res[i].year);
+        
+      var quantity = res[0].stock_quantity;
+      var finalPrice = answer.quantity * res[0].price        
+      
+      if(quantity > answer.quantity){
+          
+          console.log("Submitting order...your total is $" + finalPrice);
+          
+          connection.query("UPDATE products SET? WHERE?",
+             [
+                {
+                  stock_quantity: quantity - answer.quantity
+                },
+            ]
+        } else {
+          console.log("Sorry we're out of stock!");
         }
       });
     });
