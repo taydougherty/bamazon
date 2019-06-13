@@ -51,8 +51,6 @@ function itemSearch() {
       
       if(quantity > answer.quantity){
           
-          console.log("Submitting order...your total is $" + finalPrice);
-          
           connection.query("UPDATE products SET? WHERE?",
              [
                 {
@@ -62,8 +60,10 @@ function itemSearch() {
             function(err) {
               if(err) throw err;
               
-              console.log("Your order is complete!");
-            }   
+              console.log("Submitting your order...");
+            } 
+           );
+           console.log("Order complete! Your total is $" + finalPrice);
         } else {
           console.log("Sorry we're out of stock!");
         }
