@@ -23,11 +23,8 @@ As a manager:
 
 ### Examples
 
-Ordering as a customer:
 ![examples](https://user-images.githubusercontent.com/45830707/59557468-5a531380-8f8f-11e9-9f53-2835ae95251b.PNG)
 ![examples](https://user-images.githubusercontent.com/45830707/59557471-6fc83d80-8f8f-11e9-8028-977bda2349ad.PNG)
-
-Updating stock as a manager:
 ![examples](https://user-images.githubusercontent.com/45830707/59557477-853d6780-8f8f-11e9-9506-f2812715c6d2.PNG)
 ![examples](https://user-images.githubusercontent.com/45830707/59557478-879fc180-8f8f-11e9-819d-b341075be5d6.PNG)
 ![examples](https://user-images.githubusercontent.com/45830707/59557479-8a021b80-8f8f-11e9-8a60-d8de1d124aff.PNG)
