@@ -1,6 +1,7 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
 var keys = require("./keys.js");
+var table = require("table");
 
 var connection = mysql.createConnection({
   host: "localhost",
