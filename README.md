@@ -1,4 +1,4 @@
-# :department_store: Bamazon
+# :shopping_cart: Bamazon
 
 Bamazon is an Amazon-like storefront that uses MySQL, JavaScript and Node.js.
 
